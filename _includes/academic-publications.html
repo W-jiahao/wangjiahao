@@ -4,6 +4,6 @@
 {% for item in publications %}<li>
   {% if item.authors %}{{ item.authors | markdownify | remove: '<p>' | remove: '</p>' }}. {% endif %}
   {% if item.title %}{{ item.title | escape }}. {% endif %}
-  {% if item.venue %}{{ item.venue | escape }}{% endif %}{% if item.year %} {{ item.year | escape }}{% endif %}.
+  {% if item.venue %}{{ item.venue | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}{% if item.year %} {{ item.year | escape }}{% endif %}.
   {% if item.paper or item.code %} [{% if item.paper %} <a href="{{ item.paper | escape }}">Paper</a>{% endif %}{% if item.paper and item.code %}, {% endif %}{% if item.code %}<a href="{{ item.code | escape }}">Code</a> {% endif %}]{% endif %}
 </li>{% endfor %}</ol>{% endif %}

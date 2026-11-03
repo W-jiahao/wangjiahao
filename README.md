@@ -81,7 +81,7 @@ cv: |
   在这里填写教育经历。支持 Markdown。
 ```
 
-`selected: true` 的论文同时出现在首页 Selected Publications，完整列表显示在 Publications 页面。未提供 Paper / Code 链接的论文不会显示相应链接。
+`selected: true` 的论文同时出现在首页 Selected Publications，完整列表显示在 Publications 页面。`authors` 和 `venue` 支持 Markdown，例如 `venue: "ACM Transactions on Information Systems (**TOIS, CCF-A, THU-A**)"` 会将括号内文字加粗。未提供 Paper / Code 链接的论文不会显示相应链接。
 
 ## 本地预览
 
