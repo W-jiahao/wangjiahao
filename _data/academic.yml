@@ -1,9 +1,9 @@
 # 个人内容按要求留空，填写方法见 README.md。
-about: ""
-news: []
-publications: []
-activities: []
-awards: []
+about: "My name is Jiahao Wang (王佳豪 in chinese). I am now a 3rd year Master's student in the School of Computer Technology and Application at Qinghai University. My supervisor is Yuli Liu[https://l-lyl.github.io/yuli-liu.github.io/]. My major research interests are in Recommender Systems."
+news: [[2026-11] Our paper “Is One Reasoning Path Enough? Dual-Memory Reasoning for Harmonizing Relevance and Diversity in Recommendation” is accepted by Findings of WSDM 2027[https://wsdm-conference.org/2027/index.html]!(**CCF-B, THU-A**) ]
+publications: [Yuli Liu, **Jiahao Wang**, Bokang Fu, Yachao Cui, Yu Zhu, Zhengjun Du, Xiaojing Liu. SSRec: Structured Ranking Optimization Criterion for Sequential Recommendation. ACM Transactions on Information Systems (**TOIS, CCF-A, THU-A**) ]
+#activities: []
+#awards: []
 talks: []
 teaching: []
 cv: ""
