@@ -1,0 +1,12 @@
+---
+layout: academic
+title: Teaching
+permalink: /teaching/
+nav: teaching
+---
+<h1 class="page__title">Teaching</h1>
+{% for item in site.data.academic.teaching %}<section class="entry">
+<h2>{% if item.url %}<a href="{{ item.url | escape }}">{{ item.title | escape }}</a>{% else %}{{ item.title | escape }}{% endif %}</h2>
+<p class="entry-meta">{{ item.term | escape }}{% if item.role %} · {{ item.role | escape }}{% endif %}</p>
+{{ item.description | markdownify }}
+</section>{% endfor %}

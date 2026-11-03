@@ -1,0 +1,12 @@
+# 个人资料先留空。填入后自动显示，不填的字段不会显示。
+# 英文姓名留空时显示 Your Name。
+name: ""
+name_zh: ""
+bio: ""
+email: ""
+location: ""
+affiliation: ""
+avatar: "" # 例如 /assets/images/your-photo.jpg
+scholar: ""
+github: "https://github.com/W-jiahao"
+cv_pdf: "" # 例如 /files/cv.pdf；留空时打开站内 CV 页面

@@ -1,4 +1,23 @@
 ---
-layout: home
-author_profile: true
+layout: academic
+title: About me
+nav: home
 ---
+<h1 class="page__title">About me{% if site.data.profile.name != empty %} ({{ site.data.profile.name | escape }}){% endif %}</h1>
+<div class="section-body about-body">{{ site.data.academic.about | markdownify }}</div>
+<section class="academic-section" aria-labelledby="recent-news">
+  <h2 id="recent-news">Recent News</h2>
+  <div class="section-body">{% for item in site.data.academic.news %}<p>{% if item.date %}[{{ item.date | escape }}] {% endif %}{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endfor %}</div>
+</section>
+<section class="academic-section" aria-labelledby="selected-publications">
+  <h2 id="selected-publications">Selected Publications</h2>
+  <div class="section-body">{% include academic-publications.html selected=true %}</div>
+</section>
+<section class="academic-section" aria-labelledby="recent-professional-activities">
+  <h2 id="recent-professional-activities">Recent Professional Activities</h2>
+  <div class="section-body">{% for item in site.data.academic.activities %}<p>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endfor %}</div>
+</section>
+<section class="academic-section" aria-labelledby="honor-and-awards">
+  <h2 id="honor-and-awards">Honor and Awards</h2>
+  <div class="section-body">{% if site.data.academic.awards.size > 0 %}<ol>{% for item in site.data.academic.awards %}<li>{{ item | markdownify }}</li>{% endfor %}</ol>{% endif %}</div>
+</section>

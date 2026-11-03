@@ -1,0 +1,12 @@
+---
+layout: academic
+title: Talks
+permalink: /talks/
+nav: talks
+---
+<h1 class="page__title">Talks</h1>
+{% for item in site.data.academic.talks %}<section class="entry">
+<h2>{% if item.url %}<a href="{{ item.url | escape }}">{{ item.title | escape }}</a>{% else %}{{ item.title | escape }}{% endif %}</h2>
+<p class="entry-meta">{{ item.date | escape }}{% if item.venue %} · {{ item.venue | escape }}{% endif %}</p>
+{{ item.description | markdownify }}
+</section>{% endfor %}

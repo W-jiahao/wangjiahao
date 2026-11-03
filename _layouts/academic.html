@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ site.locale | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% assign display_name = site.data.profile.name | default: 'Your Name' %}
+  <title>{{ page.title | escape }} - {{ display_name | escape }}</title>
+  <meta name="description" content="{{ site.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/images/academic-favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <nav class="masthead__inner-wrap" aria-label="Primary navigation">
+      <a class="site-title{% if page.nav == 'home' %} current{% endif %}" href="{{ '/' | relative_url }}"{% if page.nav == 'home' %} aria-current="page"{% endif %}>{{ display_name | escape }}</a>
+      <div class="nav-links">
+        {% for item in site.data.navigation.main %}
+          {% assign nav_url = item.url %}
+          {% if item.key == 'cv' and site.data.profile.cv_pdf != empty %}{% assign nav_url = site.data.profile.cv_pdf %}{% endif %}
+          <a href="{{ nav_url | relative_url }}"{% if page.nav == item.key %} class="current" aria-current="page"{% endif %}>{{ item.title | escape }}</a>
+        {% endfor %}
+      </div>
+    </nav>
+  </header>
+  <main id="main" class="site-main" tabindex="-1">
+    <aside class="sidebar" aria-label="Author profile">
+      {% assign avatar = site.data.profile.avatar | default: '/assets/images/avatar-placeholder.svg' %}
+      <img class="author-avatar" src="{{ avatar | relative_url }}" width="175" height="205" alt="{% if site.data.profile.avatar != empty %}{{ display_name | escape }}{% else %}Profile photo placeholder{% endif %}">
+      <div class="author-details">
+        <h2 class="author-name">{{ display_name | escape }}{% if site.data.profile.name_zh != empty %} ({{ site.data.profile.name_zh | escape }}){% endif %}</h2>
+        {% if site.data.profile.bio != empty %}<div class="author-bio">{{ site.data.profile.bio | markdownify }}</div>{% endif %}
+        {% if site.data.profile.email != empty %}<p class="author-email"><a href="mailto:{{ site.data.profile.email | escape }}">{{ site.data.profile.email | escape }}</a></p>{% endif %}
+        <ul class="author-links">
+          {% if site.data.profile.location != empty %}<li><span class="profile-icon" aria-hidden="true">{% include academic-icon.html name='location' %}</span>{{ site.data.profile.location | escape }}</li>{% endif %}
+          {% if site.data.profile.affiliation != empty %}<li><span class="profile-icon" aria-hidden="true">{% include academic-icon.html name='institution' %}</span>{{ site.data.profile.affiliation | escape }}</li>{% endif %}
+          {% if site.data.profile.scholar != empty %}<li><a href="{{ site.data.profile.scholar | escape }}"><span class="profile-icon" aria-hidden="true">{% include academic-icon.html name='scholar' %}</span>Google Scholar</a></li>{% endif %}
+          {% if site.data.profile.github != empty %}<li><a href="{{ site.data.profile.github | escape }}"><span class="profile-icon" aria-hidden="true">{% include academic-icon.html name='github' %}</span>Github</a></li>{% endif %}
+        </ul>
+      </div>
+    </aside>
+    <article class="page"><div class="page__inner-wrap">{{ content }}</div></article>
+  </main>
+  <footer class="page__footer"><div class="footer-inner">
+    <a href="{{ '/sitemap/' | relative_url }}">Sitemap</a>
+    {% if site.data.profile.github != empty %}<p class="footer-follow">FOLLOW: <a href="{{ site.data.profile.github | escape }}">{% include academic-icon.html name='github' %} GITHUB</a></p>{% endif %}
+    <p class="copyright">&copy; {{ 'now' | date: '%Y' }} {{ display_name | escape }}. Powered by <a href="https://jekyllrb.com/">Jekyll</a> &amp; <a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a>.</p>
+  </div></footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+---
+layout: academic
+title: Sitemap
+permalink: /sitemap/
+---
+<h1 class="page__title">Sitemap</h1>
+<ul class="sitemap-list"><li><a href="{{ '/' | relative_url }}">About me</a></li>
+{% for item in site.data.navigation.main %}<li><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></li>{% endfor %}</ul>
