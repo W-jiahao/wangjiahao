@@ -1,8 +1,8 @@
 # 个人资料。填入后自动显示，不填的字段不会显示。
 # 英文姓名留空时显示 Your Name。
 name: "Jiahao Wang"
-name_zh: "王佳豪"
-bio: "My name is Jiahao Wang (王佳豪 in chinese). I am now a 3rd year Master's student in the School of Computer Technology and Application at Qinghai University. My supervisor is [Yuli Liu](https://l-lyl.github.io/yuli-liu.github.io/). My major research interests are in Recommender Systems."
+name_zh: ""
+bio: "Master’s student of Qinghai University"
 email: "wangjiahao2025@gmail.com"
 location: ""
 affiliation: ""
