@@ -1,16 +1,18 @@
 # 个人学术主页
 
-基于原仓库的 Minimal Mistakes / Jekyll，按参考学术主页的两栏结构制作。个人简介、论文、动态、学术活动、荣誉和简历均留空；默认头像为通用占位图。
+基于原仓库的 Minimal Mistakes / Jekyll，按参考学术主页的两栏结构制作。个人资料、简介、论文和动态分别从 `_data/profile.yml` 和 `_data/academic.yml` 读取；未填写的内容保留空白。
 
 网站地址（GitHub Pages 部署成功后）：**https://w-jiahao.github.io/wangjiahao/**
 
 ## 发布
 
-1. 仓库 Settings → Pages → Build and deployment → Source 选择 **GitHub Actions**。
-2. Actions → **Deploy personal website to GitHub Pages**，如没有自动运行，可点击 **Run workflow**，分支选 `master`。
-3. 工作流成功后访问上面的网站地址。以后提交到 `master` 会自动更新。
+1. 仓库 Settings → Pages → Build and deployment → Source 选择 **Deploy from a branch**。
+2. Branch 选择 **master**，Folder 选择 **/(root)**，点击 Save。
+3. 以后在 GitHub 修改文件并提交到 `master`，GitHub Pages 会自动构建发布，通常需要几分钟。
 
-若 fork 的 Actions 尚未启用，先在仓库 Actions 页面启用工作流。不需要修改仓库名称，也不要将发布目录设为 `docs`（原主题文档与个人主页无关）。
+在 Actions 的 **pages build and deployment** 中查看进度。构建失败时，线上会继续显示上一次成功的版本，因此即使只改 `profile.yml`，其他数据文件的语法错误也会阻止整站更新。
+
+不需要修改仓库名称，也不要将发布目录设为 `docs`（原主题文档与个人主页无关）。
 
 ## 填写个人资料
 
@@ -34,6 +36,8 @@ cv_pdf: "/files/cv.pdf"
 ## 填写学术内容
 
 所有学术内容集中在 `_data/academic.yml`。以下仅是填写格式示例，不会自动显示到网页。
+
+请保留缩进：`news` 每条需要 `date` 和 `text`，`publications` 每条需要 `title`、`authors` 等字段。不要把整段新闻或论文直接放进 `[]`。Markdown 链接写成 `[文字](https://...)`。
 
 ```yaml
 about: |
