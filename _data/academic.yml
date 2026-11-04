@@ -10,7 +10,7 @@ news:
 publications:
   - authors: "Yuli Liu, **Jiahao Wang**, Bokang Fu, Yachao Cui, Yu Zhu, Zhengjun Du, Xiaojing Liu"
     title: "SSRec: Structured Ranking Optimization Criterion for Sequential Recommendation"
-    venue: "ACM Transactions on Information Systems (**TOIS, CCF-A, THU-A**)"
+    venue: "ACM Transactions on Information Systems (**TOIS, CCF-A, THU-A**)" [ [paper](https://dl.acm.org/doi/10.1145/3796521) ]
     selected: true
 
 activities: []
