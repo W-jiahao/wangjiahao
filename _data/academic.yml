@@ -1,6 +1,6 @@
 # 首页和各栏目的学术内容。长文本用 | 或 >-，列表每条使用 -。
 about: >-
-  My name is Jiahao Wang (王佳豪 in Chinese). I am now a 3rd year Master's student in the School of Computer Technology and Application at Qinghai University. My supervisor is [Yuli Liu](https://l-lyl.github.io/yuli-liu.github.io/). My major research interests are in Recommender Systems.
+  My name is Jiahao Wang (**王佳豪** in Chinese). I am now a 3rd year Master's student in the School of Computer Technology and Application at Qinghai University. My supervisor is [Yuli Liu](https://l-lyl.github.io/yuli-liu.github.io/). My major research interests are in Recommender Systems.
 
 news:
   - date: "2026-11"
