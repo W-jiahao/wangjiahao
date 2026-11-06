@@ -6,7 +6,7 @@ bio: "Master’s student of Qinghai University"
 email: "wangjiahao2025@gmail.com"
 location: ""
 affiliation: ""
-avatar: "/assets/images/w.jpg" 
+avatar: "/assets/images/w.png" 
 scholar: ""
 github: "https://github.com/W-jiahao"
-cv_pdf: "" # 例如 /files/cv.pdf；留空时打开站内 CV 页面
+cv_pdf: "/assets/王佳豪_申博.pdf" # 例如 /files/cv.pdf；留空时打开站内 CV 页面
