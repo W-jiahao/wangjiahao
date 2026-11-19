@@ -14,7 +14,8 @@ publications:
     paper: "https://dl.acm.org/doi/10.1145/3796521"
     selected: true
 
-activities: []
+activities: 
+   - "**Reviewer:** WSDM 2027"
 awards: []
 talks: []
 teaching: []
