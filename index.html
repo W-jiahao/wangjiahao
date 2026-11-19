@@ -31,3 +31,12 @@ nav: home
   <div class="section-body">{% if site.data.academic.awards.size > 0 %}<ol>{% for item in site.data.academic.awards %}<li>{{ item | markdownify }}</li>{% endfor %}</ol>{% endif %}</div>
 </section>
 {% endcomment %}
+{% assign contact_email = site.data.profile.email | strip %}
+{% if contact_email != empty %}
+<section class="academic-section" aria-labelledby="contact">
+  <h2 id="contact">Contact</h2>
+  <div class="section-body">
+    <p>For academic exchange and collaboration, please contact me at <a href="mailto:{{ contact_email | escape }}">{{ contact_email | escape }}</a>.</p>
+  </div>
+</section>
+{% endif %}
